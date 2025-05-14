@@ -1,0 +1,236 @@
+/**
+ * Static SpinPick Styles
+ * This file contains all CSS for the static-spinner.html fallback.
+ */
+
+:root {
+  --primary: #3b82f6;
+  --secondary: #8b5cf6;
+  --background: #1f2937;
+  --surface: #374151;
+  --foreground: #f9fafb;
+  --border: #4b5563;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.theme-switcher button {
+  background-color: var(--surface);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.card {
+  background-color: var(--surface);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.card-content {
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border);
+}
+
+.button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.button-ghost {
+  background-color: transparent;
+  color: var(--foreground);
+  border: none;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Spinner Wheel Component */
+.wheel-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wheel {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 3s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  border: 5px solid var(--secondary);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.wheel-section {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: bottom right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-text {
+  transform: rotate(45deg);
+  max-width: 70px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.wheel-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 40px;
+  background-color: white;
+  transform: translate(-50%, -100%);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+.spin-button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Slot Machine Component */
+.slot-machine {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: var(--surface);
+  border-radius: 8px;
+  padding: 15px;
+  border: 3px solid #6b21a8;
+}
+
+.slot-display {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  height: 80px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.slot-reel {
+  width: 33.33%;
+  position: relative;
+  border-right: 1px dashed var(--border);
+  overflow: hidden;
+}
+
+.slot-reel:last-child {
+  border-right: none;
+}
+
+.slot-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.5s;
+}
+
+.debug-panel {
+  margin-top: 40px;
+  padding: 12px;
+  background-color: #fef3c7;
+  color: #92400e;
+  border-radius: 4px;
+  font-size: 12px;
+}

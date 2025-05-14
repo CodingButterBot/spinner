@@ -1,0 +1,58 @@
+:root {
+  /* Base system colors */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 10%);
+
+  /* Component colors */
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 10%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 10%);
+
+  /* Brand colors */
+  --primary: hsl(265 75% 40%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(35 100% 50%);
+  --secondary-foreground: hsl(0 0% 0%);
+
+  /* UI colors */
+  --muted: hsl(0 0% 97%);
+  --muted-foreground: hsl(0 0% 45%);
+  --accent: hsl(0 0% 96%);
+  --accent-foreground: hsl(0 0% 10%);
+  --destructive: hsl(0 75% 50%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  /* Border and input elements */
+  --border: hsl(0 0% 90%);
+  --input: hsl(0 0% 90%);
+  --ring: hsl(265 75% 40% / 30%);
+
+  /* Additional colors */
+  --primary-light: hsl(265 75% 50%);
+  --primary-dark: hsl(265 75% 30%);
+  --secondary-light: hsl(35 100% 65%);
+  --secondary-dark: hsl(35 100% 40%);
+
+  /* Status colors */
+  --success: hsl(150 75% 40%);
+  --warning: hsl(40 100% 50%);
+  --info: hsl(200 75% 50%);
+
+  /* Typography */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Radius */
+  --radius: 0.625rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}

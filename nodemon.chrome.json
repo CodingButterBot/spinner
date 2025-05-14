@@ -1,0 +1,22 @@
+{
+  "env": {
+    "__DEV__": "true"
+  },
+  "watch": [
+    "src",
+    "vite.config.base.ts",
+    "vite.config.chrome.ts",
+    "manifest.json",
+    "manifest.dev.json",
+    "public"
+  ],
+  "ext": "tsx,css,html,ts,json",
+  "ignore": [
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "src/**/*.spec.tsx",
+    "src/**/*.test.tsx",
+    "dist_chrome/**/*"
+  ],
+  "exec": "vite build --config vite.config.chrome.ts --mode development"
+}

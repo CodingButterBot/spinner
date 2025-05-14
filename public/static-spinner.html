@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Static SpinPick Demo</title>
+  <link rel="stylesheet" href="./static-spinner-styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SpinPick Demo</h1>
+      <div class="theme-switcher">
+        <button id="theme-toggle">🌙 Dark Mode</button>
+      </div>
+    </header>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">Randomizer Tools</h2>
+        <p class="card-description">Select a randomizer to use</p>
+      </div>
+      <div class="card-content">
+        <div class="buttons">
+          <button class="button" id="show-wheel">Spinning Wheel</button>
+          <button class="button" id="show-slots">Slot Machine</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spinning Wheel Component -->
+    <div id="wheel-component" class="card" style="display: none;">
+      <div class="card-header">
+        <h2 class="card-title">Spinning Wheel</h2>
+        <p class="card-description">Spin the wheel to pick a random option</p>
+      </div>
+      <div class="card-content">
+        <div class="wheel-container">
+          <div class="wheel" id="wheel">
+            <!-- Wheel sections added by JavaScript -->
+          </div>
+          <div class="wheel-spinner"></div>
+        </div>
+        <button class="button spin-button" id="spin-wheel">Spin the Wheel</button>
+      </div>
+      <div class="card-footer">
+        <button class="button button-outline" id="customize-wheel">Customize</button>
+        <button class="button button-ghost" id="back-from-wheel">Back</button>
+      </div>
+    </div>
+
+    <!-- Slot Machine Component -->
+    <div id="slot-component" class="card" style="display: none;">
+      <div class="card-header">
+        <h2 class="card-title">Slot Machine</h2>
+        <p class="card-description">Pull the lever to get a random combination</p>
+      </div>
+      <div class="card-content">
+        <div class="slot-machine">
+          <div class="slot-display">
+            <div class="slot-reel" id="reel1">
+              <!-- Slot items added by JavaScript -->
+            </div>
+            <div class="slot-reel" id="reel2">
+              <!-- Slot items added by JavaScript -->
+            </div>
+            <div class="slot-reel" id="reel3">
+              <!-- Slot items added by JavaScript -->
+            </div>
+          </div>
+          <button class="button" id="pull-lever">Pull Lever</button>
+        </div>
+      </div>
+      <div class="card-footer">
+        <button class="button button-outline" id="customize-slots">Customize</button>
+        <button class="button button-ghost" id="back-from-slots">Back</button>
+      </div>
+    </div>
+
+    <!-- Debug Panel -->
+    <div class="debug-panel">
+      <h3>Debug Info:</h3>
+      <p>Environment: <span id="environment">Development</span></p>
+      <p>Current time: <span id="current-time"></span></p>
+      <p>Components: Vanilla JS implementation</p>
+    </div>
+  </div>
+
+  <script src="./static-spinner-script.js"></script>
+</body>
+</html>

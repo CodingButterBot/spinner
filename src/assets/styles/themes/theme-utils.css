@@ -1,0 +1,74 @@
+/* Theme switcher utilities */
+:root {
+  /* Base system colors */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 10%);
+
+  /* Component colors */
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 10%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 10%);
+  --surface: hsl(0 0% 98%);
+
+  /* Brand colors */
+  --primary: hsl(265 75% 40%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(35 100% 50%);
+  --secondary-foreground: hsl(0 0% 0%);
+
+  /* UI colors */
+  --muted: hsl(0 0% 97%);
+  --muted-foreground: hsl(0 0% 40%);
+  --accent: hsl(0 0% 96%);
+  --accent-foreground: hsl(0 0% 10%);
+  --destructive: hsl(0 75% 50%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --success: hsl(143, 85%, 40%);
+  --success-foreground: hsl(0 0% 100%);
+
+  /* Border and input elements */
+  --border: hsl(0 0% 90%);
+  --input: hsl(0 0% 90%);
+  --ring: hsl(265 75% 40% / 30%);
+
+  /* Other UI elements */
+  --radius: 0.625rem;
+}
+
+/* Media query for system preference dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    /* Base system colors */
+    --background: hsl(265 25% 8%);
+    --foreground: hsl(265 10% 90%);
+
+    /* Component colors */
+    --card: hsl(265 25% 12%);
+    --card-foreground: hsl(265 10% 90%);
+    --popover: hsl(265 25% 12%);
+    --popover-foreground: hsl(265 10% 90%);
+    --surface: hsl(265 25% 14%);
+
+    /* Brand colors */
+    --primary: hsl(265 75% 65%);
+    --primary-foreground: hsl(0 0% 10%);
+    --secondary: hsl(35 100% 65%);
+    --secondary-foreground: hsl(0 0% 0%);
+
+    /* UI colors */
+    --muted: hsl(265 25% 16%);
+    --muted-foreground: hsl(265 10% 70%);
+    --accent: hsl(265 25% 16%);
+    --accent-foreground: hsl(265 10% 90%);
+    --destructive: hsl(0 75% 60%);
+    --destructive-foreground: hsl(0 0% 100%);
+    --success: hsl(143, 75%, 48%);
+    --success-foreground: hsl(0 0% 100%);
+
+    /* Border and input elements */
+    --border: hsl(265 15% 20%);
+    --input: hsl(265 15% 20%);
+    --ring: hsl(265 75% 65% / 30%);
+  }
+}
